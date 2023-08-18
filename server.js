@@ -21,7 +21,6 @@ app.use(cors());
 app.use("/dai/image", imageRoute);
 
 app.get("/", (request, response) => {
-    console.log(`[GET] PATH : / `);
     response.sendFile(path.join(__dirname, "public/index.html"));
 });
 
