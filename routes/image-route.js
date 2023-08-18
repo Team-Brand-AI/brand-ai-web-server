@@ -18,7 +18,7 @@ router.get("/upload", (request, response) => {
         redirect: "follow",
     };
 
-    fetch(`https://api.cloudflare.com/client/v4/accounts/${CLOUD_FLARE_ACCOUNT_ID}/images/v2/direct_upload`, requestOptions)
+    fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUD_FLARE_ACCOUNT_ID}/images/v2/direct_upload`, requestOptions)
         .then((response) => response.json())
         .then((result) => {
             response.json({
